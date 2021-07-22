@@ -1,0 +1,89 @@
+
+.ListRecipes{
+    display:flex;
+    flex-flow: row;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    color:#19191A;
+    font-size: 14px;
+    margin: 0px 0px 0px 56px;
+    border-bottom:1px solid #EBF0F3;
+    height: 40px;
+    font-weight: 100;
+    align-items: center;
+
+
+}
+
+.ListRecipes__title{
+    width:39vw;
+    margin-bottom: 0px;
+    
+}
+.ListRecipes__title__b{
+    display:flex;
+    flex-flow: row;
+    flex-basis: 50%;
+    margin-left: 48px;
+    align-items: center;
+
+}
+.ListRecipes__title__star{
+    width:12vw;
+    color:#E9DBCB;
+}
+
+.ListRecipes__title__star i{
+
+    margin-right: 5px;
+}
+
+.ListRecipes__title__switch{
+    background-repeat: no-repeat;
+    position: initial;
+    height:24px;
+    width:12vw;
+    margin-left: 5vw;
+    font-size: 24px;
+    align-items: center;
+    bottom: 15px;
+
+    
+}
+
+#flexSwitchCheckDefault{
+    margin-top: 0px;
+}
+
+
+.ListRecipes__button{
+    position: relative;
+    width: 56px;
+    height: 56px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left:70vw;
+
+}
+
+.ListRecipes__button__add{
+    width: 56px;
+    height: 56px;
+    background-color: #0C969D;
+    color:#fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0px 0px 10px #79797A;
+    float: right;
+
+}
+.ListRecipes__button__add p{
+
+    margin-bottom: 8px;
+
+}

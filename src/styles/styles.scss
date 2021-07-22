@@ -1,0 +1,15 @@
+//components
+
+
+@import './components/config';
+@import './components/topBar';
+@import './components/sideImg';
+@import './components/navBar';
+@import './components/list';
+@import './components/addBar';
+$primary: #8DC63F;
+$body-bg: #fff;
+$secondary: #8300d9;
+
+@import "node_modules/bootstrap/scss/bootstrap";
+

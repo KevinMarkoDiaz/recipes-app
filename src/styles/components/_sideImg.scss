@@ -1,0 +1,18 @@
+
+.rectangle__component{
+    display:flex;
+    height: 944px;
+    width: 342px;
+}
+
+.rectangle__component__img{
+
+    background-image: url(../../img/image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -380px;
+    border-bottom-right-radius: 100px;
+    height: 100%;
+    width: 100%;
+
+}

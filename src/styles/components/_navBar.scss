@@ -1,0 +1,72 @@
+
+.navBar__box{
+    margin-left: 48px;
+    margin-right: 48px;
+    padding-top: 5.44px;
+}
+
+
+.navBar__box__title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-style:normal;
+    color: #19191A;
+
+}
+
+.navBar__search{
+    display: flex;
+    flex-flow: row;
+
+}
+
+.navBar__search__input{
+    display: flex;
+    flex-flow: row;
+    width: 490px;
+    height: 48px;
+    border-radius: 16px;
+    background-color: #F9F9F9;
+    margin: 5.44px 16px 24px 48px;
+align-items: center;
+}
+.navBar__search__input__lupa{
+    background-image: url(../../img/searchlupa.png);
+    width: 24.24px;
+    height: 24.24px;
+    margin: 11.84px 17.6px 13.06px 11.84px ;
+}
+.navBar__search__input p{
+   
+    font-family: 'Poppins', sans-serif;
+    color: #79797A;
+    font-size: 14px;
+    margin-bottom: 0px;
+
+}
+.navBar__subti{
+    display:flex;
+    flex-flow: row;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color:#79797A;
+    margin: 0px 0px 8px 56px;
+    border-bottom: 1px solid #B1C4D1;
+
+}
+.navBar__subtitle__h3{
+    width:40vw;
+}
+.navBar__subtitle__h4{
+    display:flex;
+    flex-flow: row;
+}
+.navBar__subtitle__h4 p{
+
+    width:12vw;
+    
+}
+.navBar__subtitle__h4__h3{
+    margin-left: 5vw;
+
+}
