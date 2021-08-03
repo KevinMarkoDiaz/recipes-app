@@ -51,19 +51,13 @@
     font-size: 14px;
     padding: 2%;
     width: 100%;
-    height: 12%;
+    height: 4vh;
     margin-bottom: 7%;
+    outline: none;
 
     
 }
-.addform__container__ingredients{
-    width: 100%;
-    height: 20vh;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    margin-bottom: 7%;
 
-}
 
 .addform__container__preparation{
     width: 100%;
@@ -87,6 +81,7 @@
     padding: 2%;
     width: 100%;
     height: 80%;
+    outline: none;
 
 
 }
@@ -120,5 +115,77 @@
     margin-top:3%;
     text-justify: center;
     
+
+}
+
+//estilos de ingredientes
+.addform__container__ingredients{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    margin-bottom: 7%;
+
+}
+.addform__container__ingredients__listAdd{
+    display:flex;
+    width: 100%;
+    height: 20%;
+    background-color: #fff;
+}
+
+.addform__container__ingredients__listAdd__imput{
+    border: 2px solid #54B5BA;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    width: 80%;
+    height: 4vh;
+    padding-left: 4%;
+    margin-bottom: 1%;
+    outline: none;
+
+    
+}
+
+.addform__container__ingredients__listAdd__button{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    font-size: 125%;
+    color: #8DC63F;
+    width: 20%;
+    height: 4vh;
+
+}
+
+
+//estilos lista de recetas
+.addform__container__ingredients__list{
+    display:flex;
+    flex-flow: column;
+    width: 100%;
+    height: 60%;
+    overflow-y: scroll;
+
+}
+
+.addform__container__ingredients__list__container{
+    display: flex;
+    flex-flow: row;
+
+}
+
+
+.addform__container__ingredients__list__button{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    font-size: 125%;
+    color: #c20909;
+    width: 20%;
+    height: 4vh;
 
 }

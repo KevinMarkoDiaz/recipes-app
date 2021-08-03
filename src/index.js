@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { RecipesAplication } from './components/RecipesAplication';
+import { AppRouter } from './router/AppRouter';
 
 
 
@@ -9,5 +9,7 @@ import './styles/styles.scss';
 
 const divRoot = document.querySelector('#root');
 
-ReactDOM.render(<RecipesAplication/>, divRoot);
+console.log(process.env)
+
+ReactDOM.render(<AppRouter/>, divRoot);
 

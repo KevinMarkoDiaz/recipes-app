@@ -20,7 +20,6 @@ export const ListRecipes = () => {
 
     ];
 
-    console.log(recipesListArr[8]);
 
 
 
@@ -31,7 +30,9 @@ export const ListRecipes = () => {
            recipesListArr.map((recipe)=>{
                return (
                    
-         <div className="ListRecipes">
+         <div className="ListRecipes"
+         key={recipe.toString()}
+         >
          <p className="ListRecipes__title">{recipe}</p>
          <div className="ListRecipes__title__b" >
              <div className="ListRecipes__title__star">

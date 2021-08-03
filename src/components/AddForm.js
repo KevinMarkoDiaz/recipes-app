@@ -1,12 +1,53 @@
-import React, { useState } from 'react'
+import React, {    useState } from 'react'
+import { useDispatch } from 'react-redux';
+import { closeAddScreen } from '../actions/addRecipe';
 
 
 
 
 export const AddForm = () => {
 
-const initialStateNewRecipe = 
-     0
+const dispatch = useDispatch();
+
+const handleCloseScreen = () =>{
+    const titleRecipesAdd = document.getElementById('recipeTitleId').value;
+    const preparationRecipesAdd = document.getElementById('recipePreparationId').value;
+    
+    console.log(stateReview, stateCookedBefore, titleRecipesAdd, preparationRecipesAdd, ingredientsListButom);
+
+    dispatch(closeAddScreen())
+
+};
+ 
+
+
+//useState ingredients list
+const   ingredientsLisInitialState = [];
+const [ingredientsListButom, setingredients] = useState(ingredientsLisInitialState)
+
+
+
+
+const handleAddingredient = ()=>{
+    
+   const imputIngredient = document.getElementById('addform__container__ingredients__listAdd__imput__value').value;
+    
+    setingredients([...ingredientsListButom,imputIngredient ]);
+    document.getElementById('addform__container__ingredients__listAdd__imput__value').value = ''
+    
+    
+};
+const handleRemoveingredient = () => {
+    ingredientsListButom.pop()
+    setingredients([...ingredientsListButom])
+};
+
+
+
+
+
+
+const initialStateNewRecipe =  0
 
 const [stateCookedBefore, setstateCookedBefore] = useState(false)
     const [stateReview, setstateReview] = useState(initialStateNewRecipe)
@@ -49,14 +90,7 @@ const [stateCookedBefore, setstateCookedBefore] = useState(false)
         setstateReview(reviewsRecipesAdd)
    }
 
-    const createButom = ()=>{
-
-        const titleRecipesAdd = document.getElementById('recipeTitleId').value;
-        const preparationRecipesAdd = document.getElementById('recipePreparationId').value;
-
-      
-     console.log(stateReview, stateCookedBefore, titleRecipesAdd, preparationRecipesAdd);
- }
+   
 
 
 
@@ -76,12 +110,66 @@ const [stateCookedBefore, setstateCookedBefore] = useState(false)
                         name='tile'
                         type="text"
                         placeholder="Title*"
+                        autoComplete="off"
                          
                     ></input>
                 </div>
                 <div className="addform__container__ingredients">
-                    <p>Ingredients</p>
+                   <div><p>Ingredients</p></div> 
+                        <div className="addform__container__ingredients__list">
+                        
+                        {
+                            
+                           
+                             ingredientsListButom.map((ingredient)=>{
 
+                                
+
+                                return (
+                                <div    className="addform__container__ingredients__list__container"
+                                        key={ingredient.toString() }
+                                >
+                                    <div   className="addform__container__ingredients__listAdd__imput"
+                                        type="text"
+                                
+                                    >
+                                        {ingredient}
+                                    </div>
+                           
+                                  
+                                </div>
+                                    
+                                        )
+                            } )
+ 
+                        }
+                        
+                     
+                        </div>
+
+
+
+
+                        <div className="addform__container__ingredients__listAdd">
+                            <input className="addform__container__ingredients__listAdd__imput"
+                                    placeholder="ingredient add"
+                                    name="ingredientaadd"
+                                    type="text"
+                                    id="addform__container__ingredients__listAdd__imput__value"
+                                    autoComplete="off"
+                                >
+
+                            </input>
+                            <div className="addform__container__ingredients__listAdd__button">
+                            <i className="fas fa-plus-circle"
+                                onClick={handleAddingredient}
+                            ></i>
+                            </div>
+                            <div className="addform__container__ingredients__list__button">
+                                    <i className="fas fa-minus-circle"
+                                    onClick={handleRemoveingredient}></i>
+                                    </div>
+                        </div>
                 </div>
                 <div className="addform__container__preparation">
                     <p>Preparatíon</p>
@@ -91,6 +179,7 @@ const [stateCookedBefore, setstateCookedBefore] = useState(false)
                         name='preparation'
                         type="text"
                         placeholder="Instructions*"
+                        autoComplete="off"
                     ></input>
                 </div>
                  <div className="addform__container__reviews"  >
@@ -121,7 +210,7 @@ const [stateCookedBefore, setstateCookedBefore] = useState(false)
                          <label className="form-check-label Switch__color" htmlFor="flexSwitchCheckDefault"></label>
                     </div>
                 </div>
-                <div className="addform__container__create" onClick={createButom}>
+                <div className="addform__container__create" onClick={ handleCloseScreen}>
                     <p>Create</p>
                 </div>
                 

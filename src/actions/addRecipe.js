@@ -7,3 +7,7 @@ export const openAddScreen = () =>({
 
 
 });
+
+export const closeAddScreen = () => ({
+    type: types.addClose
+})
