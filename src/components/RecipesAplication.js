@@ -1,7 +1,7 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-import { RecipesScreen } from './RecipesScreen'
 import {store} from '../store/store'
+import { App1 } from './App1'
 
 
 
@@ -16,7 +16,7 @@ export const RecipesAplication = () => {
         <>
         <Provider store={store}>
 
-            <RecipesScreen/>
+            <App1/>
 
         </Provider>  
         </>

@@ -9,4 +9,13 @@ export const types = {
     changeRecipe: '[recipe] changeRecipe',
     saveRecipe: '[recipe] saveRecipe',
 
+    authChecking: '[auth] Cheking login state',
+    authCheckingFinish: '[auth] Finish cheking login state',
+    authStartLogin: '[auth] Start login',
+    authLogin: '[auth] login',
+    authRegister: '[auth] Register',
+    authStartRegister: '[auth] Start register',
+    authStartTokenRenew: '[auth] Start token renew',
+    authLogouth: '[auth] Logout'
+ 
 };
